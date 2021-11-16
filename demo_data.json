@@ -1,0 +1,31 @@
+{
+  "messages": [
+    {
+      "sender": "matan",
+      "reciver": "shlomo",
+      "message": "Hi shlomo!",
+      "subject": "hi",
+      "created_at": "Thu Apr 30 10:47:49 +0000 2015",
+      "id": 234,
+      "isread": true
+    },
+    {
+      "sender": "matan",
+      "reciver": "shlomo",
+      "message": "can you read this?",
+      "subject": "test",
+      "created_at": "Thu Apr 30 10:47:55 +0000 2015",
+      "id": 235,
+      "isread": false
+    },
+    {
+      "sender": "matan",
+      "reciver": "shlomo",
+      "message": "Why don't you answer?",
+      "subject": "why",
+      "created_at": "Thu Apr 30 10:49:49 +0000 2015",
+      "id": 236,
+      "isread": false
+    }
+  ]
+}
