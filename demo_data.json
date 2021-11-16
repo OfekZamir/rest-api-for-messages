@@ -2,7 +2,7 @@
   "messages": [
     {
       "sender": "matan",
-      "reciver": "shlomo",
+      "receiver": "shlomo",
       "message": "Hi shlomo!",
       "subject": "hi",
       "created_at": "Thu Apr 30 10:47:49 +0000 2015",
@@ -11,7 +11,7 @@
     },
     {
       "sender": "matan",
-      "reciver": "shlomo",
+      "receiver": "shlomo",
       "message": "can you read this?",
       "subject": "test",
       "created_at": "Thu Apr 30 10:47:55 +0000 2015",
@@ -20,7 +20,7 @@
     },
     {
       "sender": "matan",
-      "reciver": "shlomo",
+      "receiver": "shlomo",
       "message": "Why don't you answer?",
       "subject": "why",
       "created_at": "Thu Apr 30 10:49:49 +0000 2015",

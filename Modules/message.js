@@ -1,9 +1,9 @@
 const uuid = require("uuid");
 
 class Message {
-  constructor(sender, reciver, subject, message) {
+  constructor(sender, receiver, subject, message) {
     this.sender = sender;
-    this.reciver = reciver;
+    this.receiver = receiver;
     this.subject = subject;
     this.message = message;
     this.created_at = new Date();

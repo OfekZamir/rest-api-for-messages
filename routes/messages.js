@@ -7,7 +7,7 @@ const messages_data = require("../demo_data.json");
 router.post("/", async (req, res) => {
   const message = new Message(
     req.body.sender,
-    req.body.reciver,
+    req.body.receiver,
     req.body.subject,
     req.body.message
   );
@@ -24,7 +24,7 @@ router.get("/", (req, res) => {
 router.get("/:user", (req, res) => {
   const user_messages = [];
   messages_data.messages.forEach((message) => {
-    if (message.reciver == req.params.user) {
+    if (message.receiver == req.params.user) {
       user_messages.push(message);
     }
   });
@@ -35,7 +35,7 @@ router.get("/:user", (req, res) => {
 router.get("/:user/unread", (req, res) => {
   const user_messages = [];
   messages_data.messages.forEach((message) => {
-    if (message.reciver == req.params.user && message.isread == false) {
+    if (message.receiver == req.params.user && message.isread == false) {
       user_messages.push(message);
     }
   });
@@ -46,7 +46,7 @@ router.get("/:user/unread", (req, res) => {
 router.get("/:user/:id", (req, res) => {
   const user_messages = [];
   messages_data.messages.forEach((message) => {
-    if (message.reciver == req.params.user && message.id == req.params.id) {
+    if (message.receiver == req.params.user && message.id == req.params.id) {
       message.isread = true;
       user_messages.push(message);
     }
@@ -58,7 +58,7 @@ router.get("/:user/:id", (req, res) => {
 router.post("/:user", async (req, res) => {
   const message = new Message(
     req.params.user,
-    req.body.reciver,
+    req.body.receiver,
     req.body.subject,
     req.body.message
   );
@@ -71,7 +71,7 @@ router.delete("/:user/:id", async (req, res) => {
   messages_data.messages.forEach((message) => {
     if (
       (message.sender == req.params.user ||
-        message.reciver == req.params.user) &&
+        message.receiver == req.params.user) &&
       message.id == req.params.id
     ) {
       messages_data.messages.pop(message);
