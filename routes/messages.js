@@ -83,18 +83,13 @@ router.post("/:user", async (req, res) => {
 
 //Delete message:
 router.delete("/:user/:id", async (req, res) => {
-  messageExist = false;
-  messages_data.messages.forEach((message) => {
-    if (
-      (message.sender == req.params.user ||
-        message.receiver == req.params.user) &&
-      message.id == req.params.id
-    ) {
-      messageExist = true;
-      messages_data.messages.splice(messages_data.messages.findIndex(message));
-    }
-  });
-  if (messageExist) {
+  messageindex = messages_data.messages.findIndex(
+    (message) =>
+      message.id == req.params.id &&
+      (message.sender == req.params.user || message.receiver == req.params.user)
+  );
+  if (messageindex > 0) {
+    messages_data.messages.splice(messageindex, 1);
     res.send({ sucsses: true, message: "deleted" });
   } else {
     res.send({ sucsses: false, reason: "not found a message by specific id" });
