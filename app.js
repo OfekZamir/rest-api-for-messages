@@ -9,4 +9,8 @@ const { application } = require("express");
 
 app.use("/messages", messagesRoute);
 
+app.get("/", (req, res) => {
+  res.send("go to /messages");
+});
+
 app.listen(3000);
