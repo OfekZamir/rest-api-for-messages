@@ -91,7 +91,7 @@ router.delete("/:user/:id", async (req, res) => {
       message.id == req.params.id
     ) {
       messageExist = true;
-      messages_data.messages.pop(message);
+      messages_data.messages.splice(messages_data.messages.findIndex(message));
     }
   });
   if (messageExist) {
