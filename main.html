@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> </title>
+  </head>
+  <body>
+    <div>
+      site = https://message-handler-test.herokuapp.com
+      <h2>
+        MESSAGE contains: <br />"sender" : String, <br />"receiver": String,
+        <br />"subject": String, <br />"message": String
+      </h2>
+      <h3>
+        api commands:<br />
+        1.Write message in general -> POST site/messages MESSAGE <br />2.Write
+        message from user to user -> POST site/messages/USER MESSAGE(without
+        sender) <br />3.Get all messages for a specific user -> GET
+        site/messages/USER <br />4.Get all unread messages for a specific user
+        -> GET site/messages/USER/unread <br />5.Read message (return one
+        message) - GET site/messages/USER/MESSAGE.id <br />6.Delete message (as
+        owner or as receiver) - DELETE site/messages/USER/MESSAGE.id
+      </h3>
+    </div>
+  </body>
+</html>
